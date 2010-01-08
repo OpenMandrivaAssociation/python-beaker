@@ -1,5 +1,5 @@
 Name: python-beaker
-Version: 1.4
+Version: 1.5.1
 Release: %mkrel 1
 Summary: WSGI middleware layer to provide sessions
 
