@@ -1,6 +1,6 @@
 Name: python-beaker
-Version: 1.5.3
-Release: %mkrel 5
+Version: 1.6.4
+Release: 1
 Summary: WSGI middleware layer to provide sessions
 
 Group: Development/Python
@@ -68,4 +68,5 @@ rm -rf %{buildroot}
 + Revision: 395150
 - First Mandriva package based on Fedora's SPEC
 - create python-beaker
+
 
