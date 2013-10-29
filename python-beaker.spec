@@ -1,6 +1,6 @@
 Name:    python-beaker
 Version: 1.6.4
-Release: 3
+Release: 4
 Summary: WSGI middleware layer to provide sessions
 
 Group:   Development/Python
