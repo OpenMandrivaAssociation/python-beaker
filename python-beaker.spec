@@ -9,7 +9,7 @@ URL:     http://beaker.groovie.org/
 Source0: http://pypi.python.org/packages/source/B/Beaker/Beaker-%{version}.tar.gz
 BuildRequires:  python-setuptools
 BuildRequires:  python3-devel
-BuildRequires:  python3egg(setuptools)
+BuildRequires:  python3-distribute
 BuildArch:  noarch
 
 %description
