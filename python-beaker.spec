@@ -20,7 +20,6 @@ manage Session objects and signed cookies.
 %package -n python3-beaker
 Summary:        WSGI middleware layer to provide sessions
 Group:          Development/Python
-BuildRequires:  python3-devel, python3egg(setuptools)
  
 %description -n python3-beaker
 Beaker is a caching library that includes Session and Cache objects built on
