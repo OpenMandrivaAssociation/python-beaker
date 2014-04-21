@@ -1,72 +1,62 @@
-Name: python-beaker
-Version: 1.6.4
-Release: 2
-Summary: WSGI middleware layer to provide sessions
-
-Group: Development/Python
-License: BSD
-URL: http://beaker.groovie.org/
-Source0: http://pypi.python.org/packages/source/B/Beaker/Beaker-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
-BuildArch: noarch
-BuildRequires: python-setuptools
+Summary:	WSGI middleware layer to provide sessions
+Name:		python-beaker
+Version:	1.6.4
+Release:	8
+Group:		Development/Python
+License:	BSD
+Url:		http://beaker.groovie.org/
+Source0:	http://pypi.python.org/packages/source/B/Beaker/Beaker-%{version}.tar.gz
+BuildArch:	noarch
+BuildRequires:	python-setuptools
+BuildRequires:	python3-distribute
+BuildRequires:	pkgconfig(python3)
 
 %description
 Beaker is a caching library that includes Session and Cache objects built on
 Myghty's Container API used in MyghtyUtils. WSGI middleware is also included to
 manage Session objects and signed cookies.
 
+%package -n python3-beaker
+Summary:	WSGI middleware layer to provide sessions
+Group:		Development/Python
+ 
+%description -n python3-beaker
+Beaker is a caching library that includes Session and Cache objects built on
+Myghty's Container API used in MyghtyUtils. WSGI middleware is also included to
+manage Session objects and signed cookies.
 
 %prep
-%setup -q -n Beaker-%{version}
-# Fix rpmlint warning
-sed -i -e '/\/usr\/bin\/python/d' beaker/crypto/pbkdf2.py
+%setup -q -c
 
+mv Beaker-%{version} python2
+cp -r python2 python3
 
 %build
+pushd python2
 %{__python} setup.py build
+popd
+
+pushd python3
+%{__python3} setup.py build
+popd
 
 
 %install
-rm -rf %{buildroot}
+pushd python2
 %{__python} setup.py install --skip-build --root %{buildroot}
+popd
 
+pushd python3
+%{__python3} setup.py install --skip-build --root %{buildroot}
+popd
 
-%clean
-rm -rf %{buildroot}
+%files -n python-beaker
+%doc python2/LICENSE python2/CHANGELOG
+%{py_puresitedir}/beaker/
+%{py_puresitedir}/Beaker*
 
-
-%files
-%defattr(-,root,root,-)
-%doc LICENSE CHANGELOG
-%{python_sitelib}/beaker/
-%{python_sitelib}/Beaker*
-
-
-%changelog
-* Thu May 05 2011 Oden Eriksson <oeriksson@mandriva.com> 1.5.3-3mdv2011.0
-+ Revision: 667912
-- mass rebuild
-
-* Fri Oct 29 2010 Funda Wang <fwang@mandriva.org> 1.5.3-2mdv2011.0
-+ Revision: 589931
-- rebuild for python 2.7
-
-* Wed Mar 03 2010 Frederik Himpe <fhimpe@mandriva.org> 1.5.3-1mdv2010.1
-+ Revision: 514015
-- update to new version 1.5.3
-
-* Fri Jan 08 2010 Frederik Himpe <fhimpe@mandriva.org> 1.5.1-1mdv2010.1
-+ Revision: 487767
-- update to new version 1.5.1
-
-* Thu Aug 20 2009 Frederik Himpe <fhimpe@mandriva.org> 1.4-1mdv2010.0
-+ Revision: 418609
-- update to new version 1.4
-
-* Sun Jul 12 2009 Frederik Himpe <fhimpe@mandriva.org> 1.3.1-1mdv2010.0
-+ Revision: 395150
-- First Mandriva package based on Fedora's SPEC
-- create python-beaker
-
+%files -n python3-beaker
+%doc python3/LICENSE python3/CHANGELOG
+%{py3_puresitedir}/beaker/
+%{py3_puresitedir}/Beaker*
 
