@@ -1,7 +1,7 @@
 Summary:	WSGI middleware layer to provide sessions
 Name:		python-beaker
 Version:	1.6.4
-Release:	8
+Release:	9
 Group:		Development/Python
 License:	BSD
 Url:		http://beaker.groovie.org/
