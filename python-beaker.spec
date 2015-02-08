@@ -8,6 +8,7 @@ Url:		http://beaker.groovie.org/
 Source0:	http://pypi.python.org/packages/source/B/Beaker/Beaker-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python2-distribute
+BuildRequires:	python-distribute
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(python2)
 %rename		python3-beaker
