@@ -1,11 +1,11 @@
 Summary:	WSGI middleware layer to provide sessions
 Name:		python-beaker
-Version:	1.6.4
-Release:	14
+Version:	1.8.1
+Release:	1
 Group:		Development/Python
 License:	BSD
-Url:		http://beaker.groovie.org/
-Source0:	http://pypi.python.org/packages/source/B/Beaker/Beaker-%{version}.tar.gz
+Url:		http://pypi.python.org/pypi/Beaker
+Source0:	https://github.com/bbangert/beaker/archive/%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python2-distribute
 BuildRequires:	python-distribute
@@ -30,7 +30,7 @@ manage Session objects and signed cookies.
 %prep
 %setup -q -c
 
-mv Beaker-%{version} python2
+mv beaker-%{version} python2
 cp -r python2 python3
 
 %build
