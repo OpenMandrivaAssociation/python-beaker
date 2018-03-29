@@ -1,11 +1,12 @@
 Summary:	WSGI middleware layer to provide sessions
 Name:		python-beaker
 Version:	1.9.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	BSD
 Url:		http://pypi.python.org/pypi/Beaker
 Source0:	https://github.com/bbangert/beaker/archive/%{version}.tar.gz
+Patch0:		python-beaker-1.9.0-python-3.7.patch
 BuildArch:	noarch
 BuildRequires:	python2-distribute
 BuildRequires:	python-distribute
@@ -28,7 +29,7 @@ Myghty's Container API used in MyghtyUtils. WSGI middleware is also included to
 manage Session objects and signed cookies.
 
 %prep
-%setup -q -c
+%autosetup -p0 -c
 
 mv beaker-%{version} python2
 cp -r python2 python3
