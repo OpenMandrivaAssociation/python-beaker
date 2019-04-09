@@ -5,7 +5,7 @@ Release:	1
 Group:		Development/Python
 License:	BSD
 Url:		http://pypi.python.org/pypi/Beaker
-Source0:	https://github.com/bbangert/beaker/archive/%{version}.tar.gz
+Source0:	https://github.com/bbangert/beaker/archive/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python2-distribute
 BuildRequires:	python-distribute
