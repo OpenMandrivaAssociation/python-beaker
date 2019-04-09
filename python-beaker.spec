@@ -53,11 +53,11 @@ python setup.py install --skip-build --root %{buildroot}
 popd
 
 %files
-%doc python3/LICENSE python3/CHANGELOG
+#doc python3/LICENSE python3/CHANGELOG
 %{py_puresitedir}/beaker/
 %{py_puresitedir}/Beaker*
 
 %files -n python2-beaker
-%doc python2/LICENSE python2/CHANGELOG
+#doc python2/LICENSE python2/CHANGELOG
 %{py2_puresitedir}/beaker/
 %{py2_puresitedir}/Beaker*
