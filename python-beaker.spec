@@ -30,7 +30,7 @@ manage Session objects and signed cookies.
 %prep
 %autosetup -p0 -c Beaker-%{version}
 
-mv beaker-%{version} python2
+mv Beaker-%{version} python2
 cp -r python2 python3
 
 %build
