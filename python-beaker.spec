@@ -28,7 +28,7 @@ Myghty's Container API used in MyghtyUtils. WSGI middleware is also included to
 manage Session objects and signed cookies.
 
 %prep
-%autosetup -p0 -c
+%autosetup -p0 -c Beaker-%{version}
 
 mv beaker-%{version} python2
 cp -r python2 python3
