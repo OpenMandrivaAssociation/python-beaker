@@ -1,11 +1,11 @@
 Summary:	WSGI middleware layer to provide sessions
 Name:		python-beaker
-Version:	1.10.1
+Version:	1.11.0
 Release:	1
 Group:		Development/Python
 License:	BSD
 Url:		http://pypi.python.org/pypi/Beaker
-Source0:	https://files.pythonhosted.org/packages/76/87/ecc1a222f0caaa7ba7b8928737e89b2e91b8c22450c12b8a51ee625a4d87/Beaker-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/04/7b/a3eb9939d931a55c69e4bcaa82dbc64f6df9612c374e782f4ab3c176910e/Beaker-1.11.0.tar.gz
 BuildArch:	noarch
 BuildRequires:	python2-distribute
 BuildRequires:	python-distribute
