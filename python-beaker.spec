@@ -4,7 +4,7 @@ Version:	1.11.0
 Release:	5
 Group:		Development/Python
 License:	BSD
-Url:		http://pypi.python.org/pypi/Beaker
+Url:		https://pypi.python.org/pypi/Beaker
 Source0:	https://files.pythonhosted.org/packages/source/B/Beaker/Beaker-1.11.0.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-distribute
