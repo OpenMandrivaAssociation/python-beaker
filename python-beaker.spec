@@ -1,14 +1,20 @@
-Summary:	WSGI middleware layer to provide sessions
+%define module beaker
+
 Name:		python-beaker
-Version:	1.13.0
+Summary:	WSGI middleware layer to provide sessions
+Version:	1.14.1
 Release:	1
+License:	BSD-3-Clause
 Group:		Development/Python
-License:	BSD
-Url:		https://pypi.python.org/pypi/Beaker
-Source0:	https://files.pythonhosted.org/packages/source/B/Beaker/Beaker-%{version}.tar.gz
-BuildArch:	noarch
+URL:		https://beaker.readthedocs.org/
+Source0:	https://files.pythonhosted.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+# repo - https://github.com/bbangert/beaker
+
 BuildSystem:	python
+BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 %rename		python3-beaker
 
 %description
@@ -17,6 +23,5 @@ Myghty's Container API used in MyghtyUtils. WSGI middleware is also included to
 manage Session objects and signed cookies.
 
 %files
-%dir %{py_puresitedir}/beaker
-%{py_puresitedir}/beaker/*
-%{py_puresitedir}/Beaker*
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
