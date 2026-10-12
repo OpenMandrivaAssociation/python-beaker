@@ -3,7 +3,7 @@
 Name:		python-beaker
 Summary:	WSGI middleware layer to provide sessions
 Version:	1.14.1
-Release:	1
+Release:	2
 License:	BSD-3-Clause
 Group:		Development/Python
 URL:		https://beaker.readthedocs.org/
